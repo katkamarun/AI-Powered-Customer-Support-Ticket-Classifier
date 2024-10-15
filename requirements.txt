@@ -1,0 +1,6 @@
+pydantic
+instructor
+langfuse
+python-dotenv
+openai
+streamlit
