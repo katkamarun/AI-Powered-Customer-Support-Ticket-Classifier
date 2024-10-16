@@ -4,7 +4,7 @@ from src.ticket_classifier import classify_ticket, TicketClassification
 
 
 # Mock the OpenAI API response
-@patch("openai.ChatCompletion.create")
+@patch("src.ticket_classifier.openai.ChatCompletion.create")
 def test_ticket_classification_workflow(mock_openai):
     # Simulate a mocked response from OpenAI API
     mock_openai.return_value = {"choices": [{"message": {"content": "order_issue"}}]}
@@ -20,3 +20,7 @@ def test_ticket_classification_workflow(mock_openai):
     assert result.urgency == "high"  # Assuming this is the expected output
     assert result.sentiment == "frustrated"  # Assuming this is the expected output
     assert "order #12345" in result.key_information
+    assert (
+        result.suggested_action
+        == "Initiate a return for the tablet and expedite the delivery of the correct laptop."
+    )
