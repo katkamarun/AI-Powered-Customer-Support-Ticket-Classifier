@@ -31,12 +31,12 @@ jobs:
       # Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t your-dockerhub-username/ai-ticket-classifier .
+          docker build -t arunkatkam/ai-ticket-classifier .
 
       # Push Docker image to DockerHub
       - name: Push Docker image
         run: |
-          docker push your-dockerhub-username/ai-ticket-classifier
+          docker push arunkatkam/ai-ticket-classifier
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,5 +50,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'ai-ticket-classifier'
-          images: 'your-dockerhub-username/ai-ticket-classifier:latest'  # Reference your Docker image
+          images: 'arunkatkam/ai-ticket-classifier:latest'  # Reference your Docker image
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CBEF09C986C6458EBAC6C608EEF13A06 }}
