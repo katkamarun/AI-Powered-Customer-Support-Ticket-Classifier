@@ -1,5 +1,6 @@
-from src.ticket_classifier import classify_ticket
+# tests/test_app.py
 from unittest.mock import patch
+from src.ticket_classifier import classify_ticket
 from src.ticket_classifier import TicketClassification
 
 
@@ -22,7 +23,7 @@ def test_ticket_classification_workflow(mock_openai):
         suggested_action="Initiate a return for the tablet and expedite the delivery of the correct laptop.",
     )
 
-    # Instead of calling the real API, we return the mocked response
+    # Mock the function that calls OpenAI within classify_ticket
     with patch("src.ticket_classifier.classify_ticket", return_value=mock_response):
         result = classify_ticket(ticket_text)
 
