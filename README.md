@@ -144,12 +144,23 @@ Visit your app at:
 https://your-app-name.azurewebsites.net
 ```
 
-## 7. Additional Features and Future Enhancements
+## 7. CI/CD Pipeline with GitHub Actions
+This project uses GitHub Actions to automate the build and deployment process. The pipeline is triggered upon every push to the main branch and follows these steps:
+
+- **Checkout Code**: Pull the latest code from the GitHub repository.
+- **Build Docker Image**: Build the Docker image using the provided Dockerfile.
+- **Push Docker Image to DockerHub**: Automatically log in to DockerHub and push the Docker image.
+- **Deploy to Azure**: Deploy the Docker image to Azure App Service using the `azure/webapps-deploy@v2` GitHub Action.
+- **Run Tests**: Execute any defined tests to ensure code quality and functionality.
+
+The workflow configuration can be found in `.github/workflows/main.yml`.
+
+## 8. Additional Features and Future Enhancements
 This project can be extended by adding:
 - User authentication: To limit access to the app.
 - Database integration: Store classified tickets for further analysis.
 - Additional AI features: Such as text summarization or response generation based on ticket content.
 
-## 8. Conclusion
+## 9. Conclusion
 This project demonstrates how to build, containerize, and deploy an AI-powered web app using Streamlit, Docker, and Azure App Service. It’s a great starting point for more complex AI applications 
 
