@@ -4,3 +4,4 @@ langfuse
 python-dotenv
 openai
 streamlit
+pytest
