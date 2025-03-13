@@ -5,11 +5,17 @@ This project is an **AI-Powered Customer Support Ticket Classifier** built using
 Technologies Used:
 
 -OpenAI API for natural language processing (NLP) and classification.
+
 -Pydantic for Data Validation. 
+
 -Instructor library for structured output
+
 -Python for building the core logic
+
 -Docker for containerization
+
 -Microsoft Azure for scalable cloud deployment
+
 -Streamlit for creating an interactive user interface
 
 ## Table of Contents
