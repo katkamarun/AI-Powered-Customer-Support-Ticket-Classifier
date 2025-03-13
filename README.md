@@ -2,6 +2,16 @@
 
 This project is an **AI-Powered Customer Support Ticket Classifier** built using Streamlit. The app uses OpenAI's API to classify customer support tickets based on content, assessing urgency, sentiment, and other key information. The project is containerized using Docker and deployed to Azure App Service.
 
+Technologies Used:
+
+-OpenAI API for natural language processing (NLP) and classification.
+-Pydantic for Data Validation. 
+-Instructor library for structured output
+-Python for building the core logic
+-Docker for containerization
+-Microsoft Azure for scalable cloud deployment
+-Streamlit for creating an interactive user interface
+
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
