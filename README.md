@@ -14,6 +14,8 @@ Technologies Used:
 
 -Docker for containerization
 
+-Langfuse for Observability
+
 -Microsoft Azure for scalable cloud deployment
 
 -Streamlit for creating an interactive user interface
